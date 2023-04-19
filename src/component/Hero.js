@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '@/styles/Home.module.scss'
+
 import { Container,Row,Col, Button } from 'react-bootstrap';
 
 

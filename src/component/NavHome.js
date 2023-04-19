@@ -29,9 +29,10 @@ function NavHome() {
   
  <Navbar.Collapse id="basic-navbar-nav" style={{marginLeft:'20%'}}>
    <Nav className="me-auto">
-     <Nav.Link href="#home">Home</Nav.Link>
-     <Nav.Link href="#link">About</Nav.Link>
-     <Nav.Link href="#link">Menu</Nav.Link>
+     <Nav.Link href="/">Home</Nav.Link>
+     
+     <Nav.Link href="/comments">Comments</Nav.Link>
+     <Nav.Link href="/signup">Sign Up</Nav.Link>
      <Nav.Link href="#link">Events</Nav.Link>
      <Nav.Link href="#link">Chefs</Nav.Link>
      <Nav.Link href="#link">Gallery</Nav.Link>
