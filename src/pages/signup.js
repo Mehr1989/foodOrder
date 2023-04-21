@@ -1,49 +1,55 @@
 import React from 'react'
-import { Container,Row,Col, Button, InputGroup } from 'react-bootstrap'
+import { Container,Row,Col, Button, Link,Form,Nav} from 'react-bootstrap'
 import styles from '@/styles/Home.module.scss'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function signup() {
   return (
     <>
-        
-        <Container >
-         <Row>
-          <Col style={{display:"flex",justifyContent:'center',marginTop:'5%'}}>
-             <div className={styles.signBox}>
+    <Container  style={{display:"flex",justifyContent:"center",marginTop:"8vh"}}>
+    
+      <Row>
+        <Col lg={12} style={{display:"flex",flexDirection:"column",justifyContent:"center",padding:"8%",backgroundColor:"#f5a9a6"}}>
+      
+          <h3>Login</h3>
          
-           <Container>
-            <Row>
-              <Col>
-              <h5>Name</h5>
-              <input placeholder='name' />
 
-              <input placeholder='last' />
-           
-              </Col>
-              <Col>
-              <h5>Email</h5>
-              <input placeholder="Email" />
-              </Col>
+        
 
-             <Col>
-              <h5>Address</h5>
-              <input placeholder="Street Address" />
-              
-              </Col>
-              <Col>
-             
-              <input placeholder="Street Address 2" />
-              
-              </Col>
-          
-            </Row>
-           </Container>
-           
+        <Form>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Text className="text-muted">
+          We'll never share your email with anyone else.
+        </Form.Text>
+      </Form.Group>
 
-              </div>
-             
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password" placeholder="Password" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicCheckbox">
+        <Form.Check type="checkbox" label="Check me out" />
+      </Form.Group>
+      <Button variant="danger" type="submit">
+        Submit
+      </Button>
+      <Nav.Link href='register'>Signup Now</Nav.Link>
+   
+   
+    </Form>
+    
+        </Col>
+      </Row>
+      
+   
+
+    </Container>
      
+       
              
+   
           
            
             
@@ -54,14 +60,6 @@ function signup() {
          
            
 
-                
-          </Col>
-      
-         </Row>
-
-        </Container>
-       
-      
     </>
   )
 }

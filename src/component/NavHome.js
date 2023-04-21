@@ -32,7 +32,7 @@ function NavHome() {
      <Nav.Link href="/">Home</Nav.Link>
      
      <Nav.Link href="/comments">Comments</Nav.Link>
-     <Nav.Link href="/signup">Sign Up</Nav.Link>
+     <Nav.Link href="/signup">Booking</Nav.Link>
      <Nav.Link href="#link">Events</Nav.Link>
      <Nav.Link href="#link">Chefs</Nav.Link>
      <Nav.Link href="#link">Gallery</Nav.Link>
@@ -51,12 +51,15 @@ function NavHome() {
    </Nav>
  </Navbar.Collapse>
 
+<Nav.Link href='/signup'>
+<Button rounded className={styles.bookBtn} variant='danger'>Signup/Login</Button>
 
 
-   <Button rounded className={styles.bookBtn} variant='danger'>Book A Table</Button>
 
 
+</Nav.Link>
 
+  
 
 
 </Container>
