@@ -35,7 +35,7 @@ function signup() {
       <Button variant="danger" type="submit">
         Submit
       </Button>
-      <Nav.Link href='register'>Signup Now</Nav.Link>
+      <Nav.Link href='/register'>Signup Now</Nav.Link>
    
    
     </Form>
