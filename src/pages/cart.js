@@ -1,10 +1,18 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button, Col, Container ,Row} from 'react-bootstrap';
 
 function cart() {
   return (
     <>
-    <h3>This is cart page</h3>
+    <Container style={{backgroundColor:"pink"}}>
+      <Row>
+        <Col style={{display:"flex",justifyContent:"center"}}>
+        <h2>Your Purchase</h2>
+
+        </Col>
+      </Row>
+    </Container>
       
     </>
   )
