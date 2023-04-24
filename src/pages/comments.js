@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export const getStaticProps = async () => {
@@ -15,7 +16,7 @@ export const getStaticProps = async () => {
   return  { props : { posts } }
 }
 
-function Comments({posts}) {
+function comments({posts}) {
   useEffect(()=>{
     Aos.init({duration:2000})
 
@@ -96,4 +97,4 @@ It is your imprint
   )
 }
 
-export default Comments
+export default comments

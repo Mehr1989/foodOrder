@@ -1,25 +1,26 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Form,Col,Row,Container, Button,Nav } from 'react-bootstrap';
+import { Button,Col,Container,Row,Nav,Form } from 'react-bootstrap';
 
-function Register() {
+function addresse() {
   return (
-    <>
-    <Container style={{backgroundColor:"pink"}}>
+    <div>
+    
+     <Container style={{backgroundColor:"pink"}}>
       <Row>
+        
         <Col >
         <Form>
         <Form.Group className="mb-3" controlId="formBasicEmail">
        
         <Form.Label><h2>Signup Form</h2></Form.Label>
         <br/>
-        <p>
-        You can simpley signup to our website and enjoy your options
-
-        </p>
+        <Form.Label><h4>Addresse</h4></Form.Label>
+        <br/>
+       
 
         
-        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Control type="email" placeholder="addresse" />
         
       </Form.Group>
       
@@ -36,8 +37,8 @@ function Register() {
     </Container>
         
       
-    </>
+    </div>
   )
 }
 
-export default Register
+export default addresse

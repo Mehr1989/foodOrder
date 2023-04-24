@@ -3,7 +3,7 @@ import { Container,Row,Col, Button, Link,Form,Nav} from 'react-bootstrap'
 import styles from '@/styles/Home.module.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function signup() {
+function Signup() {
   return (
     <>
     <Container  style={{display:"flex",justifyContent:"center",marginTop:"8vh"}}>
@@ -64,4 +64,4 @@ function signup() {
   )
 }
 
-export default signup
+export default Signup

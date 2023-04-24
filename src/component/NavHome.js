@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container,Button,Navbar,Nav,NavDropdown,Row,Col } from 'react-bootstrap';
 import styles from '@/styles/Home.module.scss'
+import {FiShoppingCart} from 'react-icons/fi'
 
 function NavHome() {
   return (
@@ -29,8 +30,7 @@ function NavHome() {
   
  <Navbar.Collapse id="basic-navbar-nav" style={{marginLeft:'20%'}}>
    <Nav className="me-auto">
-     <Nav.Link href="/">Home</Nav.Link>
-     
+     <Nav.Link href="/">Home</Nav.Link>  
      <Nav.Link href="/comments">Comments</Nav.Link>
      <Nav.Link href="/signup">Booking</Nav.Link>
      <Nav.Link href="#link">Events</Nav.Link>
@@ -54,6 +54,16 @@ function NavHome() {
 <Nav.Link href='/signup'>
 <Button rounded className={styles.bookBtn} variant='danger'>Signup/Login</Button>
 
+
+
+
+
+</Nav.Link>
+<Nav.Link href='/cart'>
+  <Button  variant='none'>
+  <FiShoppingCart style={{marginLeft:"2%",width:"20px",height:'auto'}} />
+
+  </Button>
 
 
 
