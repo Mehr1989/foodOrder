@@ -5,11 +5,15 @@ import NavHome from './NavHome'
 
 
 
+
+
 function Layout( {children}) {
+
 
   return (
     < >
           <NavHome />
+       
   
       
       

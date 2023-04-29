@@ -2,12 +2,36 @@ import React, { useState } from 'react'
 import { products } from './data'
 import { Container,Row,Col,Card,Button } from 'react-bootstrap'
 import styles from '@/styles/Home.module.scss'
-
+import { addToCart,incrementQuantity,decrementQuantity } from '@/redux/shopSlice'
+import {useDispatch } from 'react-redux'
+import {AiFillPlusCircle} from "react-icons/Ai"
+import {AiFillMinusCircle} from "react-icons/Ai"
 
 
 
 function Menu() {
+  //related to the filter section:
  const [items,setItems] = useState(products)
+
+
+ //related to the order section:
+const dispatch = useDispatch()
+const shop =(foodItem) =>{
+  dispatch(addToCart(foodItem))
+  
+}
+
+const increment =(foodItem) =>{
+  dispatch(incrementQuantity(foodItem))
+}
+
+const decrement =(foodItem) =>{
+  dispatch(decrementQuantity(foodItem))
+}
+
+
+
+
 
  const filterItems = (filtering) =>{
   const updateList = products.filter((filterList)=>{
@@ -20,6 +44,7 @@ function Menu() {
 
   return (
     <>
+  
     <Container>
     
     <h5>Our Menu</h5>
@@ -34,22 +59,45 @@ function Menu() {
       <Row>
 
     
-    {items.map((list)=>{
+    {items.map((foodItem)=>{
       return(
         <>
       
-        <Col key={list.title} lg={4} md={6} sm={12} style={{marginTop:"5%"}}>
+        <Col key={foodItem.title} lg={4} md={6} sm={12} style={{marginTop:"5%"}}>
           <Card  data-aos='zoom-out' className={styles.menuCard}>
             <div style={{height:"40vh"}}>
 
-              <Card.Img src={list.source} style={{width:"100%",height:"100%"}}/>
+              <Card.Img src={foodItem.source} style={{width:"100%",height:"100%"}}/>
             </div>
-         
-          <h3>{list.title}</h3>
-  
-           <p>{list.text}</p>
+          
+                  <div style={{display:"flex",flexDirection:"column",alignItems:"center"}}>
+                  <h3>{foodItem.title}</h3>
+                   <p>{foodItem.text}</p>
+                   <h2>{foodItem.price}</h2>
 
-          <h2>{list.price}</h2>
+                  </div>
+       
+        <Col>
+        <div style={{display:"flex",justifyContent:"center",flexWrap:'wrap'}}>
+          <Button variant='none' onClick={()=>increment(foodItem)}>
+          <AiFillPlusCircle style={{width:"30px",height:'4vh'}}/>
+
+          </Button>
+
+        <Button variant='dark' style={{width:"60%"}} onClick={()=>shop(foodItem)}>
+          Order
+          </Button>
+        <Button variant='none' onClick={()=>decrement(foodItem)}>
+          <AiFillMinusCircle style={{width:"30px",height:'4vh'}}/>
+
+          </Button>
+
+
+        </div>
+        </Col>
+    
+     
+          
    
 
           </Card>

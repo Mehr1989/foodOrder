@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Container,Button,Navbar,Nav,NavDropdown,Row,Col } from 'react-bootstrap';
 import styles from '@/styles/Home.module.scss'
 import {FiShoppingCart} from 'react-icons/fi'
+import { useDispatch, useSelector } from 'react-redux';
+import { calculateAll } from '@/redux/shopSlice';
+
 
 function NavHome() {
+  const{cart,quantity} = useSelector((state) => state.shop)
+  const dispatch = useDispatch()
+ useEffect(()=>{
+  dispatch(calculateAll())
+ },[cart,dispatch])
   return (
     <>
         <section  >
@@ -61,7 +69,14 @@ function NavHome() {
 </Nav.Link>
 <Nav.Link href='/cart'>
   <Button  variant='none'>
+  <div style={{display:"flex"}} >
   <FiShoppingCart style={{marginLeft:"2%",width:"20px",height:'auto'}} />
+    
+    <h5>  {quantity}</h5>
+
+  
+   
+  </div>
 
   </Button>
 
